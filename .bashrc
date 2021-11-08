@@ -58,7 +58,8 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1="\[$(tput bold)\]\[\033[38;5;11m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;69m\]\A\[$(tput sgr0)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;39m\]\w\[$(tput sgr0)\]\[\033[38;5;6m\]]\[$(tput sgr0)\]> \[$(tput sgr0)\]"
+    #PS1="\[$(tput bold)\]\[\033[38;5;220m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;208m\]\A\[$(tput sgr0)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;39m\]\w\[$(tput sgr0)\]\[\033[38;5;6m\]]\[$(tput sgr0)\]> \[$(tput sgr0)\]"
+    PS1="\[$(tput bold)\]\[\033[38;5;227m\]\u\[$(tput sgr0)\]@\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;214m\]\A\[$(tput sgr0)\]-\[$(tput sgr0)\]\[\033[38;5;78m\]\h\[$(tput sgr0)\]>\[$(tput sgr0)\]\[\033[38;5;45m\][\w]\[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;87m\]>\[$(tput sgr0)\] \[$(tput sgr0)\]"
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -92,20 +93,12 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias gcc='gcc-7'
-alias g++='g++-7'
 alias rg='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-alias ml='/usr/local/MATLAB/R2019b/bin/matlab'
 alias nf='neofetch'
+alias sf='screenfetch'
 alias bh='bashtop'
-alias mypose='source /home/ylwu/Documents/venv/bin/activate && cd /home/ylwu/Documents/venv/bodypose'
-alias pl='pdflatex'
-alias c='cd /home/ylwu/Documents/venv/literature_survey/report/ && code *.tex ref.bib'
-alias v='source /home/ylwu/Documents/venv/bin/activate'
-alias nvcc='/usr/local/cuda-11.1/bin/nvcc'
 alias smi='watch -n0.5 nvidia-smi'
-alias zo='cd /home/ylwu && /home/ylwu/Zotero_linux-x86_64/zotero'
-alias sd='sudo shutdown now'
+alias cc='sudo sysctl vm.drop_caches=3'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -131,9 +124,3 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export CUDA_HOME=/usr/local/cuda-11.1
-export LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH
-export PATH=/usr/local/cuda-11.1/bin:$PATH
-
-export CC=gcc-7
-export CXX=g++-7

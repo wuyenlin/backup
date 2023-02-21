@@ -6,12 +6,6 @@ sudo apt install git ssh tmux tmate vim xclip ranger neofetch python3 ranger xor
 snap install spotify nvim lsd vlc
 
 
-# add custom icons and themes
-echo "copying icon and theme files"
-sudo cp -r icons/* /usr/share/icons/
-sudo cp -r themes/* /usr/share/themes/
-
-
 # load configuration
 echo "loading configuration and setting up rc files"
 cp .bashrc ~/
